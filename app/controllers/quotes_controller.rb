@@ -25,7 +25,8 @@ class QuotesController < ApplicationController
   # POST /quotes
   # POST /quotes.json
   def create
-    @quote = Quote.new(quote_params)
+    Quote.create(quote_params)
+    redirect_to root_path
 
     respond_to do |format|
       if @quote.save
@@ -70,6 +71,6 @@ class QuotesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def quote_params
-      params.fetch(:quote, {})
+      params.require(:quote).permit(:saying, :author)
     end
 end
