@@ -1,3 +1,0 @@
-class Quote < ApplicationRecord
-
-end
