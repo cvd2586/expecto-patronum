@@ -8,20 +8,6 @@ class QuotesController < ApplicationController
     @quotes= Quote.all
   end
 
-  # GET /quotes/1
-  # GET /quotes/1.json
-  def show
-  end
-
-  # GET /quotes/new
-  def new
-    @quote = Quote.new
-  end
-
-  # GET /quotes/1/edit
-  def edit
-  end
-
   # POST /quotes
   # POST /quotes.json
   def create
