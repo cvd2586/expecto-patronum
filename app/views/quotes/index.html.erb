@@ -1,6 +1,16 @@
 <p id="notice"><%= notice %></p>
 
+<h2>
+  <span>SPLURTY / No. <%= @quote.id %></span>
+  Here's the <u>best unsolicited startup advice</u> you can get!
+</h2>
+
 <h1><%= @quote.saying %></h1>
-<h2>- <%= @quote.author %></h2>
+<h2 class="float-right">- <%= @quote.author %></h2>
 
 <%= link_to 'New Quote', new_quote_path %>
+
+<br class="clear" />
+<br />
+<br />
+<br />
