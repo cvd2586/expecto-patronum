@@ -4,7 +4,7 @@ class QuotesController < ApplicationController
   # GET /quotes
   # GET /quotes.json
   def index
-    @quote = Quote.order('RANDOM()').first
+    @quote = Quote.all.sample
     @quotes= Quote.all
   end
 
